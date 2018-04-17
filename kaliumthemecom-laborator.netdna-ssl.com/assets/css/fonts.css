@@ -1,0 +1,17 @@
+@font-face{ 
+	font-family: 'Function Pro';
+	src: url('https://kaliumthemecom-laborator.netdna-ssl.com/assets/fonts/functionpro_medium_macroman/FunctionPro-Medium-webfont.eot');
+	src: url('https://kaliumthemecom-laborator.netdna-ssl.com/assets/fonts/functionpro_medium_macroman/FunctionPro-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('https://kaliumthemecom-laborator.netdna-ssl.com/assets/fonts/functionpro_medium_macroman/FunctionPro-Medium-webfont.woff') format('woff'),
+	     url('https://kaliumthemecom-laborator.netdna-ssl.com/assets/fonts/functionpro_medium_macroman/FunctionPro-Medium-webfont.ttf') format('truetype'),
+	     url('https://kaliumthemecom-laborator.netdna-ssl.com/assets/fonts/functionpro_medium_macroman/FunctionPro-Medium-webfont.svg#webfont') format('svg');
+}
+
+@font-face{ 
+	font-family: 'Function Pro Book';
+	src: url('https://kaliumthemecom-laborator.netdna-ssl.com/assets/fonts/functionpro_book_macroman/FunctionPro-Book-webfont.eot');
+	src: url('https://kaliumthemecom-laborator.netdna-ssl.com/assets/fonts/functionpro_book_macroman/FunctionPro-Book-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('https://kaliumthemecom-laborator.netdna-ssl.com/assets/fonts/functionpro_book_macroman/FunctionPro-Book-webfont.woff') format('woff'),
+	     url('https://kaliumthemecom-laborator.netdna-ssl.com/assets/fonts/functionpro_book_macroman/FunctionPro-Book-webfont.ttf') format('truetype'),
+	     url('https://kaliumthemecom-laborator.netdna-ssl.com/assets/fonts/functionpro_book_macroman/FunctionPro-Book-webfont.svg#webfont') format('svg');
+}
