@@ -1833,7 +1833,7 @@ body .wrapper .reviews-section .more-reviews{
     border-top:1px solid #292929
 }
 body .wrapper .reviews-section .more-reviews .container:before{
-    content:'Some customers reviews';
+    content:'CONTACT US';
     background:#181818;
     color:#888;
     text-transform:uppercase;
