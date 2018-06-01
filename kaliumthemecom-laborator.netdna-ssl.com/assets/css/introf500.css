@@ -1,4 +1,5 @@
-﻿body {
+﻿
+body {
 	font-family: 'Function Pro', sans-serif;
 	color: #222
 }
@@ -490,7 +491,7 @@ body .wrapper .kalium-intro-top {
 }
 
 body .wrapper .kalium-intro-top .kalium-intro-image {
-	background: url(../img/header-background.jpg);
+    background:url(../img/header-background.jpg);
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
@@ -856,7 +857,15 @@ body .wrapper .portfolio-header-section .section-header h2 {
 	border-bottom: 10px solid #00af9b;
 	display: inline-block
 }
+body .wrapper .portfolio-header-section p {
+	font-size: 30px;
+	display: inline-block;
+    color:#fff;
+    text-align:justify;
+    margin-left:100px;
+    margin-right:100px;
 
+}
 @media screen and (max-width:768px) {
 	body .wrapper .portfolio-header-section .section-header h2 {
 		font-size: 50px;
