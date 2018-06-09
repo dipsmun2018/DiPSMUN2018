@@ -33,3 +33,14 @@
   color: white;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+.secgen{
+    max-width:250px;
+    max-height:250px;
+    width:auto;
+    height:auto;
+    align-content:center;
+    margin-left:40%;
+    border-radius:2px;
+    padding:5px;
+   
+}
