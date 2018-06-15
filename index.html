@@ -44,271 +44,350 @@
                 "-moz-background-size": "cover";
             }
         );
-        });
-    </script>
-    <style>
-        .affix {
-        top:0;
-        width: 100%;
-        z-index: 9999 !important;
-        color:white;
-        }
-        .navbar {
-        margin-bottom: 0px;
-        color:white;
-        }
-        .navbar-nav> .active > a,
-        .navbar-nav > .active > a:hover {
-        color: #FFF !important;
-        background-color: #000!important;
-        }
-        
-    </style>
 
+        $('body').scrollspy({
+        target: '#scroll-spy',
+        offset: 70
+        });
+
+        // On render, adjust body padding to ensure last Scroll target can reach top of screen
+        var height = $('#howto').innerHeight();
+        var windowHeight = $(window).height();
+        var navHeight = $('nav.navbar').innerHeight();
+        var siblingHeight = $('#howto').nextAll().innerHeight();
+
+
+        if(height < windowHeight){
+        $('body').css("padding-bottom", windowHeight-navHeight-height-siblingHeight + "px");
+        }
+
+        // On window resize, adjust body padding to ensure last Scroll target can reach top of screen
+        $(window).resize(function(event){
+        var height = $('#howto').innerHeight();
+        var windowHeight = $(window).height();
+        var navHeight = $('nav.navbar').innerHeight();
+        var siblingHeight = $('#howto').nextAll().innerHeight();
+
+
+        if(height < windowHeight){
+        $('body').css("padding-bottom", windowHeight-navHeight-height-siblingHeight + "px");
+        }
+        });
+
+        $('nav.navbar a, .scrollTop').click(function(event){
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash (#)
+        var hash = this.hash;
+
+        // Ensure no section has relevant class
+        $('section').removeClass("focus");
+
+        // Add class to target
+        $(hash).addClass("focus");
+
+        // Remove thy class after timeout
+        setTimeout(function(){
+        $(hash).removeClass("focus");
+        }, 2000);
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area (the speed of the animation)
+        $('html, body').animate({
+        scrollTop: $(hash).offset().top - 69
+        }, 600, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+        });
+
+        // Collapse Navbar for mobile view
+        $(".navbar-collapse").collapse('hide');
+        }
+
+        });
+        $(window).scroll(function(){
+        var scrollPos = $('body').scrollTop();
+        if(scrollPos > 0){
+        $('.navbar').addClass('show-color');
+        $('.scrollTop').addClass('show-button');
+        } else{
+        $('.navbar').removeClass('show-color');
+        $('.scrollTop').removeClass('show-button');
+        }
+
+        });
+
+        });
+
+        
+
+        // Scrollspy initiation
+
+        
+    </script>
+   
 </head>
 
-    <body>
+<body data-spy="scroll" data-target="#scroll-spy">
 
     <header class="main-menu">
-                    <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
-                        <div class="container-fluid">
-                            <div>
-                                <div class="collapse navbar-collapse" id="myNavbar">
-                                    <ul class="nav navbar-nav">
-                                        <li><a href="#intro"><font color="white">Introduction</font></a></li>
-                                        <li></li>
-                                        <li><a href="#committees"><font color="white">Commitees</font></a></li>
-                                        <li><a href="#Social-Media"><font color="white">Social-Media</font></a></li>
-                                        <li> <a href="Country-matrix.html" target="_parent" class="btn rounded-btn purchase-kalium-top pull-right"><font color="white">Country-Matrix</font></a> </li>
-                                        <li> <a href="REGISTER.html" target="_parent" class="btn rounded-btn purchase-kalium-top pull-right"><font color="white">REGISTER NOW</font></a> </li>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-home" href="#home" role="button">
+                        <svg class="lnr lnr-home"><use xlink:href="#lnr-home"></use></svg>
+                    </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#scroll-spy" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="material-icons">&#xE5D2;</i>
+                    </button>
+                    <!-- 				<a class="navbar-brand" href="#home">Boom Scroll
+                                    <i class="material-icons">mouse</i>
+                                </a> -->
+                </div>
 
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </nav>    
+                <!-- Collect the nav links, forms for toggling -->
+                <div class="collapse navbar-collapse" id="scroll-spy">
 
+                    <!-- navbar-nav -->
+                    <ul class="nav navbar-nav ">
+                        <li><a href="#intro">Introduction</a></li>
+                        <li><a href="#committees">Committees</a></li>
+                        <li><a href="#Social-Media">Social-Media</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="Country-matrix.html">COUNTRY MATRIX</a></li>
+                        <li><a href="REGISTER.html">REGISTER NOW</a></li>
+                    </ul><!-- /.navbar-nav -->
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav><!-- /.fixed navigation -->
     </header>
 
     <div class="wrapper">
-    <!-- ../img/header-background.jpg-->
-    <div class="kalium-intro-top section-paddings" >
-    <div class="kalium-intro-image">
-    <div class="img-overlay"></div>
-    </div>
-    <div class="container">
-    <div class="intro-slogan">
-    <div class="kalium-update-two"></div>
+        <!-- ../img/header-background.jpg-->
+        <div class="kalium-intro-top section-paddings">
+            <div class="kalium-intro-image">
+                <div class="img-overlay"></div>
+            </div>
+            <div class="container">
+                <div class="intro-slogan">
+                    <div class="kalium-update-two"></div>
 
-    <h1><font color="#dfdfbf">DiPSMUN 2018</font></h1>
-    <h4>Youth - The Frontrunners Of Peace And Development </h4>
-    <button class="button" onclick="window.location.href = 'REGISTER.html'">REGISTER NOW</button>
-    </div>
-
-
-    </div>
-    </div> <!-- Kalium Intro Top -->
-    <!-- heading done -->
-
-    <div class="clean-coded-section section-paddings" id="intro">
-    <div class="container">
-    <div class="row">
-    <div class="clean-coded-header-text">
-    <h2>Introduction</h2>
-    <p>Delhi Public School, Bangalore South conducted its first Model United Nations Conference as a small intra school event in 2013. Since then, DiPSMUN has blossomed into one of Bangalore's finest youth conferences, with more and more delegates attending every year. This year, we are back on the 4th, 5th, and 6th of July, and we hope the 2018 edition of DiPSMUN will be much bigger and better. Register now!</p>
-    </div>
-    </div>
-    </div>
-    </div>
-
-    <div class="other-page-elements">
-
-    <div class="header-types-section section-paddings">
+                    <h1><font color="#dfdfbf">DiPSMUN 2018</font></h1>
+                    <h4>Youth - The Frontrunners Of Peace And Development </h4>
+                    <button class="button" onclick="window.location.href = 'REGISTER.html'">REGISTER NOW</button>
+                </div>
 
 
-    <div class="features-section section-paddings" id="committees">
-    <div class="container">
-    <div class="section-header">
-    <p class="section-subtitle">This year's</p>
-    <h2 class="section-title">COMMITTEES</h2>
-    </div> <!-- section-header -->
-    <div class="row">
-    <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-    <a href="DISEC.html">
-    <div class="feature-box">
-    <div class="feature-logo">
-    <img alt="DISEC" class="demo-image hover-animation lazyloaded" width="150px" height="100px" src="../kaliumthemecom-laborator.netdna-ssl.com/assets/img/committee/Disec.jpg" />
-    </div>
-    <h2 class="feature-title">DISEC</h2>
-    <p class="feature-description">General Assembly I  <br /> Disarmament and International Security </p>
-    </div>
-    </a>
-    </div> <!--GA-I-->
-    <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-    <a href="SOCHUM.html">
-    <div class="feature-box">
-    <div class="feature-logo">
-    <img alt="SOCHUM" class="demo-image hover-animation lazyloaded" width="150px" height="100px" src="../kaliumthemecom-laborator.netdna-ssl.com/assets/img/committee/SOCHUM.jpg" />
-    </div>
-    <h2 class="feature-title">SOCHUM</h2>
-    <p class="feature-description"> General Assembly II Committee <br /> Social, Cultural, and Humanitarian Affairs </p>
-    </div>
-    </a>
-    </div><!--SOCHUM-->
-    <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-    <a href="ECOSOC.html">
-    <div class="feature-box">
-    <div class="feature-logo">
-    <img alt="ECOSOC" class="demo-image hover-animation lazyloaded" width="150px" height="100px" src="../kaliumthemecom-laborator.netdna-ssl.com/assets/img/committee/Ecosoc.jpg" />
-    </div>
-    <h2 class="feature-title">ECOSOC</h2>
-    <p class="feature-description"> Economic and Social Council </p>
-    </div>
-    </a>
-    </div>  <!--ECOSOC-->
-    <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-    <a href="SC.html">
-    <div class="feature-box">
-    <div class="feature-logo">
-    <img alt="SC" class="demo-image hover-animation lazyloaded" width="150px" height="100px" src="../kaliumthemecom-laborator.netdna-ssl.com/assets/img/committee/sc.jpg" />
-    </div>
-    <h2 class="feature-title">SC</h2>
-    <p class="feature-description"> Security Council </p>
-    </div>
-    </a>
-    </div> <!--SC-->
+            </div>
+        </div> <!-- Kalium Intro Top -->
+        <!-- heading done -->
+
+        <div class="clean-coded-section section-paddings" id="intro">
+            <div class="container">
+                <div class="row">
+                    <div class="clean-coded-header-text">
+                        <h2>Introduction</h2>
+                        <p>Delhi Public School, Bangalore South conducted its first Model United Nations Conference as a small intra school event in 2013. Since then, DiPSMUN has blossomed into one of Bangalore's finest youth conferences, with more and more delegates attending every year. This year, we are back on the 4th, 5th, and 6th of July, and we hope the 2018 edition of DiPSMUN will be much bigger and better. Register now!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="other-page-elements">
+
+            <div class="header-types-section section-paddings">
 
 
+                <div class="features-section section-paddings" id="committees">
+                    <div class="container">
+                        <div class="section-header">
+                            <p class="section-subtitle">This year's</p>
+                            <h2 class="section-title">COMMITTEES</h2>
+                        </div> <!-- section-header -->
+                        <div class="row">
+                            <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+                                <a href="DISEC.html">
+                                    <div class="feature-box">
+                                        <div class="feature-logo">
+                                            <img alt="DISEC" class="demo-image hover-animation lazyloaded" width="150px" height="100px" src="../kaliumthemecom-laborator.netdna-ssl.com/assets/img/committee/Disec.jpg" />
+                                        </div>
+                                        <h2 class="feature-title">DISEC</h2>
+                                        <p class="feature-description">General Assembly I  <br /> Disarmament and International Security </p>
+                                    </div>
+                                </a>
+                            </div> <!--GA-I-->
+                            <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+                                <a href="SOCHUM.html">
+                                    <div class="feature-box">
+                                        <div class="feature-logo">
+                                            <img alt="SOCHUM" class="demo-image hover-animation lazyloaded" width="150px" height="100px" src="../kaliumthemecom-laborator.netdna-ssl.com/assets/img/committee/SOCHUM.jpg" />
+                                        </div>
+                                        <h2 class="feature-title">SOCHUM</h2>
+                                        <p class="feature-description"> General Assembly II Committee <br /> Social, Cultural, and Humanitarian Affairs </p>
+                                    </div>
+                                </a>
+                            </div><!--SOCHUM-->
+                            <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+                                <a href="ECOSOC.html">
+                                    <div class="feature-box">
+                                        <div class="feature-logo">
+                                            <img alt="ECOSOC" class="demo-image hover-animation lazyloaded" width="150px" height="100px" src="../kaliumthemecom-laborator.netdna-ssl.com/assets/img/committee/Ecosoc.jpg" />
+                                        </div>
+                                        <h2 class="feature-title">ECOSOC</h2>
+                                        <p class="feature-description"> Economic and Social Council </p>
+                                    </div>
+                                </a>
+                            </div>  <!--ECOSOC-->
+                            <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+                                <a href="SC.html">
+                                    <div class="feature-box">
+                                        <div class="feature-logo">
+                                            <img alt="SC" class="demo-image hover-animation lazyloaded" width="150px" height="100px" src="../kaliumthemecom-laborator.netdna-ssl.com/assets/img/committee/sc.jpg" />
+                                        </div>
+                                        <h2 class="feature-title">SC</h2>
+                                        <p class="feature-description"> Security Council </p>
+                                    </div>
+                                </a>
+                            </div> <!--SC-->
 
 
 
 
-    </div>
-
-    <div class="row">
-    <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-    <a href="HUNSSOSP.html">
-    <div class="feature-box">
-    <div class="feature-logo">
-    <img alt="HUNSSOSP" class="demo-image hover-animation lazyloaded" width="150px" height="100px" src="../kaliumthemecom-laborator.netdna-ssl.com/assets/img/committee/Hunssosp.jpg" />
-    </div>
-    <h2 class="feature-title">HUNSSOSP</h2>
-    <p class="feature-description">  Historic United Nations<br /> Special Summit on the Status of Palestine, 1948 </p>
-    </div>
-    </a>
-    </div> <!--HUNSSOP-->
-
-    <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-    <a href="AIPM.html">
-    <div class="feature-box">
-    <div class="feature-logo">
-    <img alt="AIPM" class="demo-image hover-animation lazyloaded" width="150px" height="100px" src="../kaliumthemecom-laborator.netdna-ssl.com/assets/img/committee/AIPM.jpg" />
-    </div>
-    <h2 class="feature-title">AIPM</h2>
-    <p class="feature-description">All India Party Meet </p>
-    </div>
-    </a>
-    </div><!--AIPM-->
-
-    <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-    <a href="HJCC.html">
-    <div class="feature-box">
-    <div class="feature-logo">
-    <img alt="HJCC" class="demo-image hover-animation lazyloaded" width="150px" height="100px" src="../kaliumthemecom-laborator.netdna-ssl.com/assets/img/committee/HJCC.jpg" />
-    </div>
-    <h2 class="feature-title">HJCC</h2>
-    <p class="feature-description"> Historic Joint Crisis Cabinets <br /> The American Civil War, The Union and The Confederacy, 1861 </p>
-    </div>
-    </a>
-    </div> <!--HJCC-->
-    <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
-    <a href="IPC.html">
-    <div class="feature-box">
-    <div class="feature-logo">
-    <img alt="IPC" class="demo-image hover-animation lazyloaded" width="150px" height="100px" src="../kaliumthemecom-laborator.netdna-ssl.com/assets/img/committee/IPC.jpg" />
-    </div>
-    <h2 class="feature-title">IPC</h2>
-    <p class="feature-description"> International Press Corps </p>
-    </div>
-    </a>
-    </div><!--IPC-->
 
 
+                        </div>
 
-    </div>
-    </div> <!-- container -->
-    </div> <!-- Committees -->
-    </div> <!-- Header Types section -->
+                        <div class="row">
+                            <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+                                <a href="HUNSSOSP.html">
+                                    <div class="feature-box">
+                                        <div class="feature-logo">
+                                            <img alt="HUNSSOSP" class="demo-image hover-animation lazyloaded" width="150px" height="100px" src="../kaliumthemecom-laborator.netdna-ssl.com/assets/img/committee/Hunssosp.jpg" />
+                                        </div>
+                                        <h2 class="feature-title">HUNSSOSP</h2>
+                                        <p class="feature-description">  Historic United Nations<br /> Special Summit on the Status of Palestine, 1948 </p>
+                                    </div>
+                                </a>
+                            </div> <!--HUNSSOP-->
 
-    <div class="portfolio-header-section" >
-    <div class="container">
-    <div class="section-header">
-    <h2>Letter from the Secretary General</h2>
-    </div>
-    <div>
-    <img src="../kaliumthemecom-laborator.netdna-ssl.com/assets/img/secgen.jpeg" class="secgen" />
-    </div>
-    <br /><br />
-    <p>Delegates,<br />
+                            <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+                                <a href="AIPM.html">
+                                    <div class="feature-box">
+                                        <div class="feature-logo">
+                                            <img alt="AIPM" class="demo-image hover-animation lazyloaded" width="150px" height="100px" src="../kaliumthemecom-laborator.netdna-ssl.com/assets/img/committee/AIPM.jpg" />
+                                        </div>
+                                        <h2 class="feature-title">AIPM</h2>
+                                        <p class="feature-description">All India Party Meet </p>
+                                    </div>
+                                </a>
+                            </div><!--AIPM-->
 
-    I invite you to the fifth edition of DiPSMUN with the greatest possible enthusiasm and pride. It is an honour to serve as the Secretary General of DiPSMUN 2018, and to host you at Delhi Public School, Bangalore South, on the 4th, 5th, and 6th of July.<br /><br />
-
-    The United Nations is, and always has been the pillar and messenger of peace in a world of war. Seventy three years after its formation, the UN is our most developed and certainly most important international body. The United Nations has always aimed at being a global ‘family’, and aspired to make every member feel protected.<br /><br />
-
-    I was part of the organising committee of the very first DiPSMUN, and I have watched the event grow into one of Bangalore’s best youth conferences. I’m confident that every single delegate shall have an enjoyable and empowering experience.<br /><br />
-
-    DiPSMUN 2018 is a model UN conference that is going to redefine what MUNs are all about. With nine power packed committees and over four hundred and fifty plus delegates pouring in from every corner of the city, the conference promises, above all else, to deliver at a massive scale.<br /><br />
-    It is a great platform to understand deeply what actually drives national interests, how superficial or how strong international ties really are, and open your mind to a whole new bunch of world issues - the list is too long. But more importantly, DiPSMUN provides you with an opportunity to test your thinking on your feet, your diplomatic ability, and your leadership skills.<br /><br />
-
-    Whether you are declaring war in one of the historic summits, or challenging public policy measures politely in the United Nations Councils, the nine committees of DiPSMUN 2018 have holistic experiences to offer.<br />
-    I’m excited to present DiPSMUN 2018 before you, and everything it has to offer.<br /><br />
-
-    Looking forward to seeing you in July!<br /><br />
-
-    Sincerely,<br />
-    Shikhar Maniar<br />
-    Secretary General, DiPSMUN 2018
-
-    </p>
-    </div>
-    </div> <!-- SecGen section -->
+                            <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+                                <a href="HJCC.html">
+                                    <div class="feature-box">
+                                        <div class="feature-logo">
+                                            <img alt="HJCC" class="demo-image hover-animation lazyloaded" width="150px" height="100px" src="../kaliumthemecom-laborator.netdna-ssl.com/assets/img/committee/HJCC.jpg" />
+                                        </div>
+                                        <h2 class="feature-title">HJCC</h2>
+                                        <p class="feature-description"> Historic Joint Crisis Cabinets <br /> The American Civil War, The Union and The Confederacy, 1861 </p>
+                                    </div>
+                                </a>
+                            </div> <!--HJCC-->
+                            <div class="col-md-3 col-sm-4 col-xs-6 col-xxs-12">
+                                <a href="IPC.html">
+                                    <div class="feature-box">
+                                        <div class="feature-logo">
+                                            <img alt="IPC" class="demo-image hover-animation lazyloaded" width="150px" height="100px" src="../kaliumthemecom-laborator.netdna-ssl.com/assets/img/committee/IPC.jpg" />
+                                        </div>
+                                        <h2 class="feature-title">IPC</h2>
+                                        <p class="feature-description"> International Press Corps </p>
+                                    </div>
+                                </a>
+                            </div><!--IPC-->
 
 
 
-    <div class="support-section" id="Social-Media">
-    <div class="container">
-    <h2 class="section-title">Follow Us On </h2>
-    <!--<p class="section-subtitle">Find answers to all of your questions here.</p>-->
+                        </div>
+                    </div> <!-- container -->
+                </div> <!-- Committees -->
+            </div> <!-- Header Types section -->
 
-    <div class="row">
-    <div class="support-box-holder">
+            <div class="portfolio-header-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Letter from the Secretary General</h2>
+                    </div>
+                    <div>
+                        <img src="../kaliumthemecom-laborator.netdna-ssl.com/assets/img/secgen.jpeg" class="secgen" />
+                    </div>
+                    <br /><br />
+                    <p>
+                        Delegates,<br />
 
-    <div class="support-box-details col-md-6 col-lg-3 col-md-offset-0 col-lg-offset-1">
-    <a href="https://www.facebook.com/groups/DiPSMUN/" class="fa fa-facebook"></a>
-    <div class="details-text-holder">
-    <h3>Facebook</h3>
-    </div>
-    </div>
+                        I invite you to the fifth edition of DiPSMUN with the greatest possible enthusiasm and pride. It is an honour to serve as the Secretary General of DiPSMUN 2018, and to host you at Delhi Public School, Bangalore South, on the 4th, 5th, and 6th of July.<br /><br />
 
-    <div class="support-box-details col-md-6 col-lg-3 col-md-offset-0 col-lg-offset-0">
-    <a href="https://www.instagram.com/dipsmun2018/?hl=en" class="fa fa-instagram"></a>
-    <div class="details-text-holder">
-    <h3>Instagram</h3>
-    </div>
-    </div>
+                        The United Nations is, and always has been the pillar and messenger of peace in a world of war. Seventy three years after its formation, the UN is our most developed and certainly most important international body. The United Nations has always aimed at being a global ‘family’, and aspired to make every member feel protected.<br /><br />
 
-    <div class="laborator-support-guy slideInRight wow" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: slideInRight;"></div>
-    </div> <!-- support-box-holder -->
-    </div>
-    </div> <!-- container -->
-    </div> <!--contact us part-->
-    <div class="reviews-section section-paddings">
-    <div class="container">
-    <?xml version="1.0" encoding="utf-8" ?>
-    <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-    <svg class="reviews-message-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-    viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
-    <style type="text/css">
+                        I was part of the organising committee of the very first DiPSMUN, and I have watched the event grow into one of Bangalore’s best youth conferences. I’m confident that every single delegate shall have an enjoyable and empowering experience.<br /><br />
+
+                        DiPSMUN 2018 is a model UN conference that is going to redefine what MUNs are all about. With nine power packed committees and over four hundred and fifty plus delegates pouring in from every corner of the city, the conference promises, above all else, to deliver at a massive scale.<br /><br />
+                        It is a great platform to understand deeply what actually drives national interests, how superficial or how strong international ties really are, and open your mind to a whole new bunch of world issues - the list is too long. But more importantly, DiPSMUN provides you with an opportunity to test your thinking on your feet, your diplomatic ability, and your leadership skills.<br /><br />
+
+                        Whether you are declaring war in one of the historic summits, or challenging public policy measures politely in the United Nations Councils, the nine committees of DiPSMUN 2018 have holistic experiences to offer.<br />
+                        I’m excited to present DiPSMUN 2018 before you, and everything it has to offer.<br /><br />
+
+                        Looking forward to seeing you in July!<br /><br />
+
+                        Sincerely,<br />
+                        Shikhar Maniar<br />
+                        Secretary General, DiPSMUN 2018
+
+                    </p>
+                </div>
+            </div> <!-- SecGen section -->
+
+
+
+            <div class="support-section" id="Social-Media">
+                <div class="container">
+                    <h2 class="section-title">Follow Us On </h2>
+                    <!--<p class="section-subtitle">Find answers to all of your questions here.</p>-->
+
+                    <div class="row">
+                        <div class="support-box-holder">
+
+                            <div class="support-box-details col-md-6 col-lg-3 col-md-offset-0 col-lg-offset-1">
+                                <a href="https://www.facebook.com/groups/DiPSMUN/" class="fa fa-facebook"></a>
+                                <div class="details-text-holder">
+                                    <h3>Facebook</h3>
+                                </div>
+                            </div>
+
+                            <div class="support-box-details col-md-6 col-lg-3 col-md-offset-0 col-lg-offset-0">
+                                <a href="https://www.instagram.com/dipsmun2018/?hl=en" class="fa fa-instagram"></a>
+                                <div class="details-text-holder">
+                                    <h3>Instagram</h3>
+                                </div>
+                            </div>
+
+                            <div class="laborator-support-guy slideInRight wow" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: slideInRight;"></div>
+                        </div> <!-- support-box-holder -->
+                    </div>
+                </div> <!-- container -->
+            </div> <!--contact us part-->
+            <div class="reviews-section section-paddings">
+                <div class="container">
+                    <?xml version="1.0" encoding="utf-8" ?>
+                    <!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg class="reviews-message-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+                    <style type="text/css">
     .reviews-message-icon .st0{fill:#F1AD36;}
     .reviews-message-icon .st1{fill:none;stroke:#BA8125;stroke-width:2;stroke-miterlimit:10;}
 </style>
@@ -359,7 +438,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-lg-4 col-md-6 col-xs-12 clear-md">
                                 <div class="review-box media">
                                     <div class="pull-left">
@@ -384,8 +463,8 @@
                                 <div class="review-box media">
                                     <div class="pull-left">
                                         <span class="image-placeholder img-5" style="max-width:100px;max-height:100px;">
-                                            
-                                           
+
+
                                         </span>
                                     </div>
                                     <div class="media-body">
@@ -427,7 +506,7 @@
                     </div>
                 </div>
             </div> <!-- Reviews section -->
-           
+
 
         </div> <!-- other-page-elements -->
     </div> <!-- Wrapper -->
