@@ -42,24 +42,42 @@
         });
     </script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#scroll-spy">
 
     <header class="main-menu">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2 col-xs-6">
-                    <a href="http://www.south.dpsbangalore.net/" target="_parent" class="logo pull-left"></a>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-home" href="#home" role="button">
+                        <svg class="lnr lnr-home"><use xlink:href="#lnr-home"></use></svg>
+                    </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#scroll-spy" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="material-icons">&#xE5D2;</i>
+                    </button>
+                    <!-- 				<a class="navbar-brand" href="#home">Boom Scroll
+                                    <i class="material-icons">mouse</i>
+                                </a> -->
                 </div>
-                <div class="col-md-2 pull-right col-xs-6">
-                    <a href="REGISTER.html" target="_parent" class="btn rounded-btn purchase-kalium-top pull-right">Register</a>
-                </div>
-            </div>
-        </div>
+
+                <!-- Collect the nav links, forms for toggling -->
+                <div class="collapse navbar-collapse" id="scroll-spy">
+
+                    <!-- navbar-nav -->
+                    <ul class="nav navbar-nav ">
+                        <li active><a href="index.html#committees" margin>Back</a></li>
+                        <li><a href="REGISTER.html">REGISTER NOW</a></li>
+
+                    </ul><!-- /.navbar-nav -->
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav><!-- /.fixed navigation -->
     </header>
-    
+
     <div class="wrapper">
-       <!-- ../img/header-background.jpg-->
-        <div class="kalium-intro-top section-paddings" >
+        <!-- ../img/header-background.jpg-->
+        <div class="kalium-intro-top section-paddings">
             <div class="kalium-intro-image">
                 <div class="img-overlay"></div>
             </div>
@@ -67,7 +85,7 @@
                 <div class="intro-slogan">
                     <div class="kalium-update-two"></div>
                 </div>
-               
+
             </div>
         </div> <!-- Kalium Intro Top -->
         <!-- heading done -->
@@ -77,10 +95,11 @@
                 <div class="row">
                     <div class="clean-coded-header-text">
                         <h2>About the committee</h2>
-                        <p>"This is the way the world ends; not with a bang but with a whimper."<br />- TS Eliot<br />
+                        <p>
+                            "This is the way the world ends; not with a bang but with a whimper."<br />- TS Eliot<br />
 
-With the rise of fake news and the impending war between cyber companies and media outlets, there is no committee more powerful or necessary than the Press Corps. Silent, observant, and biased, the International Press Corps shape thoughts, policies, and civilization. In this era, journalists hold the intricacies of power in their pens. Unmasking dictatorships, tearing through societies, discovering stories in the face of ruin - all of these lead to the ultimate goal of every news story: to recover the best obtainable version of the truth from the debris of lies.
-</p>
+                            With the rise of fake news and the impending war between cyber companies and media outlets, there is no committee more powerful or necessary than the Press Corps. Silent, observant, and biased, the International Press Corps shape thoughts, policies, and civilization. In this era, journalists hold the intricacies of power in their pens. Unmasking dictatorships, tearing through societies, discovering stories in the face of ruin - all of these lead to the ultimate goal of every news story: to recover the best obtainable version of the truth from the debris of lies.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -91,17 +110,16 @@ With the rise of fake news and the impending war between cyber companies and med
             <div class="header-types-section section-paddings">
 
             </div> <!-- Header Types section -->
-
-          <!--  <div class="portfolio-header-section" id="portfolio">
-                <div class="container">
-                    <div class="section-header">
-                        <h2>Agenda</h2>
-                    </div>
-                    <p>1. The Situation in Western Pakistan, with regard to the Baloch insurgency, the FATA region, and the Durand Line.<br />
-                       2. Curbing socio-political instability in Mali whilst dealing with European intervention in the region. </p>
-                    <br /> <button class="button">Click here for resources</button>
-                </div>
-            </div> <!-- SecGen section -->
+            <!--  <div class="portfolio-header-section" id="portfolio">
+                  <div class="container">
+                      <div class="section-header">
+                          <h2>Agenda</h2>
+                      </div>
+                      <p>1. The Situation in Western Pakistan, with regard to the Baloch insurgency, the FATA region, and the Durand Line.<br />
+                         2. Curbing socio-political instability in Mali whilst dealing with European intervention in the region. </p>
+                      <br /> <button class="button">Click here for resources</button>
+                  </div>
+              </div> <!-- SecGen section -->
 
             <div class="features-section section-paddings" id="explore-theme">
                 <div class="container">
@@ -111,7 +129,7 @@ With the rise of fake news and the impending war between cyber companies and med
                             <div class="eb">
                                 <img src="../kaliumthemecom-laborator.netdna-ssl.com/assets/img/chairs/sid.jpg" alt="Norway" style="width:100%" />
                                 <div class="eb_container">
-                                    <p>Siddharth Aatreya <br/>Head of Press</p>
+                                    <p>Siddharth Aatreya <br />Head of Press</p>
                                 </div>
                             </div>
                         </div>
@@ -146,6 +164,6 @@ With the rise of fake news and the impending war between cyber companies and med
 
     <script src="../kaliumthemecom-laborator.netdna-ssl.com/assets/js/min/joinable-footer-minf500.js?v=13">
     </script>
- 
+
 </body>
 </html>

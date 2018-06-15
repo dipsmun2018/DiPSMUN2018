@@ -42,24 +42,42 @@
         });
     </script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#scroll-spy">
 
     <header class="main-menu">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2 col-xs-6">
-                    <a href="http://www.south.dpsbangalore.net/" target="_parent" class="logo pull-left"></a>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-home" href="#home" role="button">
+                        <svg class="lnr lnr-home"><use xlink:href="#lnr-home"></use></svg>
+                    </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#scroll-spy" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="material-icons">&#xE5D2;</i>
+                    </button>
+                    <!-- 				<a class="navbar-brand" href="#home">Boom Scroll
+                                    <i class="material-icons">mouse</i>
+                                </a> -->
                 </div>
-                <div class="col-md-2 pull-right col-xs-6">
-                    <a href="REGISTER.html" target="_parent" class="btn rounded-btn purchase-kalium-top pull-right">Register</a>
-                </div>
-            </div>
-        </div>
+
+                <!-- Collect the nav links, forms for toggling -->
+                <div class="collapse navbar-collapse" id="scroll-spy">
+
+                    <!-- navbar-nav -->
+                    <ul class="nav navbar-nav ">
+                        <li active><a href="index.html#committees" margin>Back</a></li>
+                        <li><a href="REGISTER.html">REGISTER NOW</a></li>
+
+                    </ul><!-- /.navbar-nav -->
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav><!-- /.fixed navigation -->
     </header>
-    
+
     <div class="wrapper">
-       <!-- ../img/header-background.jpg-->
-        <div class="kalium-intro-top section-paddings" >
+        <!-- ../img/header-background.jpg-->
+        <div class="kalium-intro-top section-paddings">
             <div class="kalium-intro-image">
                 <div class="img-overlay"></div>
             </div>
@@ -67,7 +85,7 @@
                 <div class="intro-slogan">
                     <div class="kalium-update-two"></div>
                 </div>
-               
+
             </div>
         </div> <!-- Kalium Intro Top -->
         <!-- heading done -->
@@ -77,10 +95,11 @@
                 <div class="row">
                     <div class="clean-coded-header-text">
                         <h2>About the committee</h2>
-                        <p>"No one is free, even the birds are chained to the sky"<br />- Bob Dylan<br />
+                        <p>
+                            "No one is free, even the birds are chained to the sky"<br />- Bob Dylan<br />
 
-For centuries, the questions of freedom and ethics have been subjected to constant change and revision. Draconian laws have become more moderate, slaves have become free, and monarchies have been eradicated. Ideals which were once taken for granted are now barbaric, and our definitions of humanity itself have been remodeled. In doing so, the Social, Humanitarian, and Cultural Committee of the United Nations has arguably become one of the most important committees existing in the world today, because it finally challenges humanity as a whole to redefine and preserve itself.
-</p>
+                            For centuries, the questions of freedom and ethics have been subjected to constant change and revision. Draconian laws have become more moderate, slaves have become free, and monarchies have been eradicated. Ideals which were once taken for granted are now barbaric, and our definitions of humanity itself have been remodeled. In doing so, the Social, Humanitarian, and Cultural Committee of the United Nations has arguably become one of the most important committees existing in the world today, because it finally challenges humanity as a whole to redefine and preserve itself.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -97,8 +116,10 @@ For centuries, the questions of freedom and ethics have been subjected to consta
                     <div class="section-header">
                         <h2>Agenda</h2>
                     </div>
-                    <p>1. Addressing the problems related to social exclusion; and promoting the integration of marginalized groups into society.<br />
-2. Tackling the ill treatment of women migrant workers </p>
+                    <p>
+                        1. Addressing the problems related to social exclusion; and promoting the integration of marginalized groups into society.<br />
+                        2. Tackling the ill treatment of women migrant workers
+                    </p>
                     <br /> <button class="button">Click here for resources</button>
                 </div>
             </div> <!-- SecGen section -->
@@ -111,7 +132,7 @@ For centuries, the questions of freedom and ethics have been subjected to consta
                             <div class="eb">
                                 <img src="../kaliumthemecom-laborator.netdna-ssl.com/assets/img/chairs/rai.jpg" alt="rai" style="width:100%" />
                                 <div class="eb_container">
-                                    <p>Ryan Tennyson<br/>Chair</p>
+                                    <p>Ryan Tennyson<br />Chair</p>
                                 </div>
                             </div>
                         </div>
@@ -146,6 +167,6 @@ For centuries, the questions of freedom and ethics have been subjected to consta
 
     <script src="../kaliumthemecom-laborator.netdna-ssl.com/assets/js/min/joinable-footer-minf500.js?v=13">
     </script>
- 
+
 </body>
 </html>

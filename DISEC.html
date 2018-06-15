@@ -42,24 +42,42 @@
         });
     </script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#scroll-spy">
 
     <header class="main-menu">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2 col-xs-6">
-                    <a href="http://www.south.dpsbangalore.net/" target="_parent" class="logo pull-left"></a>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-home" href="#home" role="button">
+                        <svg class="lnr lnr-home"><use xlink:href="#lnr-home"></use></svg>
+                    </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#scroll-spy" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="material-icons">&#xE5D2;</i>
+                    </button>
+                    <!-- 				<a class="navbar-brand" href="#home">Boom Scroll
+                                    <i class="material-icons">mouse</i>
+                                </a> -->
                 </div>
-                <div class="col-md-2 pull-right col-xs-6">
-                    <a href="REGISTER.html" target="_parent" class="btn rounded-btn purchase-kalium-top pull-right">Register</a>
-                </div>
-            </div>
-        </div>
+
+                <!-- Collect the nav links, forms for toggling -->
+                <div class="collapse navbar-collapse" id="scroll-spy">
+
+                    <!-- navbar-nav -->
+                    <ul class="nav navbar-nav ">
+                        <li active><a href="index.html#committees" margin>Back</a></li>
+                        <li><a href="REGISTER.html">REGISTER NOW</a></li>
+
+                    </ul><!-- /.navbar-nav -->
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav><!-- /.fixed navigation -->
     </header>
-    
+
     <div class="wrapper">
-       <!-- ../img/header-background.jpg-->
-        <div class="kalium-intro-top section-paddings" >
+        <!-- ../img/header-background.jpg-->
+        <div class="kalium-intro-top section-paddings">
             <div class="kalium-intro-image">
                 <div class="img-overlay"></div>
             </div>
@@ -67,7 +85,7 @@
                 <div class="intro-slogan">
                     <div class="kalium-update-two"></div>
                 </div>
-               
+
             </div>
         </div> <!-- Kalium Intro Top -->
         <!-- heading done -->
@@ -77,11 +95,12 @@
                 <div class="row">
                     <div class="clean-coded-header-text">
                         <h2>About the committee</h2>
-                        <p>"In the fields the bodies burning, as the war machine keeps turning."<br />
-- Black Sabbath, 'War Pigs'<br />
+                        <p>
+                            "In the fields the bodies burning, as the war machine keeps turning."<br />
+                            - Black Sabbath, 'War Pigs'<br />
 
-The strangest thing about victory is how temporary it is. Revolutions erupt, are quelled, and erupt again. Leaders change, governments change, but wars never change. Thus, the international community has been pushed to a precipice. Restrict the tools of war, or fall again into the cycle of war. The Disarmament and International Security Committee, or the First Committee, is responsible for peace, security and co-operation of the global community. The world is a tottering table, and the DISEC serves as a balance to stabilize it. Don't rock the table too hard, delegates, or the world is going to come crashing down.
-</p>
+                            The strangest thing about victory is how temporary it is. Revolutions erupt, are quelled, and erupt again. Leaders change, governments change, but wars never change. Thus, the international community has been pushed to a precipice. Restrict the tools of war, or fall again into the cycle of war. The Disarmament and International Security Committee, or the First Committee, is responsible for peace, security and co-operation of the global community. The world is a tottering table, and the DISEC serves as a balance to stabilize it. Don't rock the table too hard, delegates, or the world is going to come crashing down.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -98,9 +117,10 @@ The strangest thing about victory is how temporary it is. Revolutions erupt, are
                     <div class="section-header">
                         <h2>Agenda</h2>
                     </div>
-                    <p>1. Mexican Drug War - Discussing Illegal arms trade and asymmetric warfare<br />
-                       2. Nuclear disarmament with special reference to the Iran Nuclear deal
- </p>
+                    <p>
+                        1. Mexican Drug War - Discussing Illegal arms trade and asymmetric warfare<br />
+                        2. Nuclear disarmament with special reference to the Iran Nuclear deal
+                    </p>
                     <br /> <button class="button">Click here for resources</button>
                 </div>
             </div> <!-- SecGen section -->
@@ -111,9 +131,9 @@ The strangest thing about victory is how temporary it is. Revolutions erupt, are
                     <div class="row">
                         <div class="col-md-3">
                             <div class="eb">
-                                <img src="../kaliumthemecom-laborator.netdna-ssl.com/assets/img/chairs/pallavi.jpg" alt="Norway" style="width:100%" />
+                                <img src="../kaliumthemecom-laborator.netdna-ssl.com/assets/img/chairs/pallavi.jpg" alt="pallavi" style="width:100%" />
                                 <div class="eb_container">
-                                    <p>Coming Soon <br/>Chair</p>
+                                    <p>Pallavi Agarwal <br />Chair</p>
                                 </div>
                             </div>
                         </div>
@@ -148,6 +168,6 @@ The strangest thing about victory is how temporary it is. Revolutions erupt, are
 
     <script src="../kaliumthemecom-laborator.netdna-ssl.com/assets/js/min/joinable-footer-minf500.js?v=13">
     </script>
- 
+
 </body>
 </html>

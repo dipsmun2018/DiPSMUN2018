@@ -42,24 +42,42 @@
         });
     </script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#scroll-spy">
 
     <header class="main-menu">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2 col-xs-6">
-                    <a href="http://www.south.dpsbangalore.net/" target="_parent" class="logo pull-left"></a>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-home" href="#home" role="button">
+                        <svg class="lnr lnr-home"><use xlink:href="#lnr-home"></use></svg>
+                    </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#scroll-spy" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="material-icons">&#xE5D2;</i>
+                    </button>
+                    <!-- 				<a class="navbar-brand" href="#home">Boom Scroll
+                                    <i class="material-icons">mouse</i>
+                                </a> -->
                 </div>
-                <div class="col-md-2 pull-right col-xs-6">
-                    <a href="REGISTER.html" target="_parent" class="btn rounded-btn purchase-kalium-top pull-right">Register</a>
-                </div>
-            </div>
-        </div>
+
+                <!-- Collect the nav links, forms for toggling -->
+                <div class="collapse navbar-collapse" id="scroll-spy">
+
+                    <!-- navbar-nav -->
+                    <ul class="nav navbar-nav ">
+                        <li active><a href="index.html#committees" margin:>Back</a></li>
+                        <li><a href="REGISTER.html">REGISTER NOW</a></li>
+                       
+                    </ul><!-- /.navbar-nav -->
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav><!-- /.fixed navigation -->
     </header>
-    
+
     <div class="wrapper">
-       <!-- ../img/header-background.jpg-->
-        <div class="kalium-intro-top section-paddings" >
+        <!-- ../img/header-background.jpg-->
+        <div class="kalium-intro-top section-paddings">
             <div class="kalium-intro-image">
                 <div class="img-overlay"></div>
             </div>
@@ -67,7 +85,7 @@
                 <div class="intro-slogan">
                     <div class="kalium-update-two"></div>
                 </div>
-               
+
             </div>
         </div> <!-- Kalium Intro Top -->
         <!-- heading done -->
@@ -77,11 +95,12 @@
                 <div class="row">
                     <div class="clean-coded-header-text">
                         <h2>About the committee</h2>
-                        <p>"The only possible idea of India is that of a nation greater than the sum of its parts."<br />
-- Shashi Tharoor<br />
+                        <p>
+                            "The only possible idea of India is that of a nation greater than the sum of its parts."<br />
+                            - Shashi Tharoor<br />
 
-No country in the world can claim to be as inherently diverse as the Republic of India. Yet, under this diversity, tensions boil rapidly as the citizens are constantly divided by caste, language, and ideology. Vote banks, communal separation, and riots threaten to tear the threads of unity that the idea of this nation is hanging by. To protect this idea, and to resolve the conflicts of the Union, it is important to have a body that makes clear to the various leaders of the various ideologies in this country that their goal should be to build the nation higher, not watch it crumble. The All India Political Party Meet pits political goliaths against underdogs controlling important vote banks. Remember, no matter how high the stakes go, the greatest coalition of all is India herself.
-</p>
+                            No country in the world can claim to be as inherently diverse as the Republic of India. Yet, under this diversity, tensions boil rapidly as the citizens are constantly divided by caste, language, and ideology. Vote banks, communal separation, and riots threaten to tear the threads of unity that the idea of this nation is hanging by. To protect this idea, and to resolve the conflicts of the Union, it is important to have a body that makes clear to the various leaders of the various ideologies in this country that their goal should be to build the nation higher, not watch it crumble. The All India Political Party Meet pits political goliaths against underdogs controlling important vote banks. Remember, no matter how high the stakes go, the greatest coalition of all is India herself.
+                        </p>
 
                     </div>
                 </div>
@@ -99,9 +118,10 @@ No country in the world can claim to be as inherently diverse as the Republic of
                     <div class="section-header">
                         <h2>Agenda</h2>
                     </div>
-                    <p>1. Review of the SC ST Protection Act<br />
-                       2. The question of Special Statuses for the states of Andhra Pradesh and Telangana
- </p>
+                    <p>
+                        1. Review of the SC ST Protection Act<br />
+                        2. The question of Special Statuses for the states of Andhra Pradesh and Telangana
+                    </p>
                     <br /> <button class="button">Click here for resources</button>
                 </div>
             </div> <!-- SecGen section -->
@@ -114,7 +134,7 @@ No country in the world can claim to be as inherently diverse as the Republic of
                             <div class="eb">
                                 <img src="../kaliumthemecom-laborator.netdna-ssl.com/assets/img/chairs/suryo.jpg" alt="Surya" style="width:100%" />
                                 <div class="eb_container">
-                                    <p>Suryadeepto Nag<br/>Chair</p>
+                                    <p>Suryadeepto Nag<br />Chair</p>
                                 </div>
                             </div>
                         </div>
@@ -149,6 +169,6 @@ No country in the world can claim to be as inherently diverse as the Republic of
 
     <script src="../kaliumthemecom-laborator.netdna-ssl.com/assets/js/min/joinable-footer-minf500.js?v=13">
     </script>
- 
+
 </body>
 </html>

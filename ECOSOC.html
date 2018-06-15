@@ -42,24 +42,42 @@
         });
     </script>
 </head>
-<body>
+<body data-spy="scroll" data-target="#scroll-spy">
 
     <header class="main-menu">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-2 col-xs-6">
-                    <a href="http://www.south.dpsbangalore.net/" target="_parent" class="logo pull-left"></a>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-home" href="#home" role="button">
+                        <svg class="lnr lnr-home"><use xlink:href="#lnr-home"></use></svg>
+                    </a>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#scroll-spy" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="material-icons">&#xE5D2;</i>
+                    </button>
+                    <!-- 				<a class="navbar-brand" href="#home">Boom Scroll
+                                    <i class="material-icons">mouse</i>
+                                </a> -->
                 </div>
-                <div class="col-md-2 pull-right col-xs-6">
-                    <a href="REGISTER.html" target="_parent" class="btn rounded-btn purchase-kalium-top pull-right">Register</a>
-                </div>
-            </div>
-        </div>
+
+                <!-- Collect the nav links, forms for toggling -->
+                <div class="collapse navbar-collapse" id="scroll-spy">
+
+                    <!-- navbar-nav -->
+                    <ul class="nav navbar-nav ">
+                        <li active><a href="index.html#committees" margin>Back</a></li>
+                        <li><a href="REGISTER.html">REGISTER NOW</a></li>
+
+                    </ul><!-- /.navbar-nav -->
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav><!-- /.fixed navigation -->
     </header>
-    
+
     <div class="wrapper">
-       <!-- ../img/header-background.jpg-->
-        <div class="kalium-intro-top section-paddings" >
+        <!-- ../img/header-background.jpg-->
+        <div class="kalium-intro-top section-paddings">
             <div class="kalium-intro-image">
                 <div class="img-overlay"></div>
             </div>
@@ -67,7 +85,7 @@
                 <div class="intro-slogan">
                     <div class="kalium-update-two"></div>
                 </div>
-               
+
             </div>
         </div> <!-- Kalium Intro Top -->
         <!-- heading done -->
@@ -77,12 +95,13 @@
                 <div class="row">
                     <div class="clean-coded-header-text">
                         <h2>About the committee</h2>
-                        <p>"If all the economists were laid end to end, they'd never reach a conclusion."<br />
-- George Bernard Shaw<br />
+                        <p>
+                            "If all the economists were laid end to end, they'd never reach a conclusion."<br />
+                            - George Bernard Shaw<br />
 
-Money is responsible for all of us. It creates livelihoods, it destroys lives. It builds up nations, and forces them to fall back down again. And it is the thing that the Economic and Social Council swears by. Development, culture, progress - these can mean nothing without the economy to back them up. Delegates, if the world could be compared to a car, you're about to enter the driver's seat with a hundred other people. Make sure you all brake in time, or in the long run, the car's gonna crash and we're all dead.
+                            Money is responsible for all of us. It creates livelihoods, it destroys lives. It builds up nations, and forces them to fall back down again. And it is the thing that the Economic and Social Council swears by. Development, culture, progress - these can mean nothing without the economy to back them up. Delegates, if the world could be compared to a car, you're about to enter the driver's seat with a hundred other people. Make sure you all brake in time, or in the long run, the car's gonna crash and we're all dead.
 
-</p>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -112,7 +131,7 @@ Money is responsible for all of us. It creates livelihoods, it destroys lives. I
                             <div class="eb">
                                 <img src="../kaliumthemecom-laborator.netdna-ssl.com/assets/img/chairs/rutuja.jpg" alt="Rutuja" style="width:100%" />
                                 <div class="eb_container">
-                                    <p>Rutuja Uttarwar<br/>Chair</p>
+                                    <p>Rutuja Uttarwar<br />Chair</p>
                                 </div>
                             </div>
                         </div>
@@ -147,6 +166,6 @@ Money is responsible for all of us. It creates livelihoods, it destroys lives. I
 
     <script src="../kaliumthemecom-laborator.netdna-ssl.com/assets/js/min/joinable-footer-minf500.js?v=13">
     </script>
- 
+
 </body>
 </html>
