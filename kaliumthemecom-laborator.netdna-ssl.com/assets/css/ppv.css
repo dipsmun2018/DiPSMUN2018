@@ -181,7 +181,7 @@ ul.navbar-nav {
   ul.navbar-nav > li {
     float: none;
     display: inline-block;
-    margin-right:10px;
+
   }
 }
 ul.navbar-nav > li > a {
@@ -192,7 +192,7 @@ ul.navbar-nav > li > a {
   line-height: 70px;
   letter-spacing: 1px;
   color: currentColor;
-  margin-right:10px;
+
 }
 ul.navbar-nav > li > a:hover {
   background: rgba(0, 0, 0, 0.15);
