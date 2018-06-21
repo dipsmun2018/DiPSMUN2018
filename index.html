@@ -11,6 +11,7 @@
     <link href="../kaliumthemecom-laborator.netdna-ssl.com/assets/css/animate.min.css" rel="stylesheet" />
     <link href="../kaliumthemecom-laborator.netdna-ssl.com/assets/css/slick.css" rel="stylesheet" />
     <link href="../kaliumthemecom-laborator.netdna-ssl.com/assets/css/slick-theme.css" rel="stylesheet" />
+    <link href="../kaliumthemecom-laborator.netdna-ssl.com/assets/css/jquery.classycountdown.css" rel="stylesheet" type="text/css" />
     <link rel="alternate" type="application/rss+xml" title="Kalium » Social Networks Comments Feed" href="https://demo.kaliumtheme.com/main/elements/social-networks/feed/" />
 
 
@@ -21,7 +22,7 @@
    
     <script src="../kaliumthemecom-laborator.netdna-ssl.com/assets/js/min/joinable-head-minf500.js?v=13">
     </script>
-
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
     </script>
@@ -123,13 +124,13 @@
 
         });
 
-        
+
 
         // Scrollspy initiation
 
-        
+
     </script>
-   
+
 </head>
 
 <body data-spy="scroll" data-target="#scroll-spy">
@@ -182,21 +183,28 @@
                     <h1><font color="#dfdfbf">DiPSMUN 2018</font></h1>
                     <h4>Youth - The Frontrunners Of Peace And Development </h4>
                     <button class="button" onclick="window.location.href = 'REGISTER.html'">REGISTER NOW</button>
+                    
                 </div>
 
 
             </div>
+         <!-- this is the one you a-->
         </div> <!-- Kalium Intro Top -->
         <!-- heading done -->
 
         <div class="clean-coded-section section-paddings" id="intro">
             <div class="container">
                 <div class="row">
+                    <div class="container"><div id="countdown4" class="ClassyCountdownDemo"></div></div>
+                </div>
+                <div class="row">
                     <div class="clean-coded-header-text">
                         <h2>Introduction</h2>
                         <p>Delhi Public School, Bangalore South conducted its first Model United Nations Conference as a small intra school event in 2013. Since then, DiPSMUN has blossomed into one of Bangalore's finest youth conferences, with more and more delegates attending every year. This year, we are back on the 4th, 5th, and 6th of July, and we hope the 2018 edition of DiPSMUN will be much bigger and better. Register now!</p>
                     </div>
+
                 </div>
+                
             </div>
         </div>
 
@@ -256,10 +264,6 @@
                                     </div>
                                 </a>
                             </div> <!--SC-->
-
-
-
-
 
 
                         </div>
@@ -512,8 +516,65 @@
         </div> <!-- other-page-elements -->
     </div> <!-- Wrapper -->
 
-    <script src="../kaliumthemecom-laborator.netdna-ssl.com/assets/js/min/joinable-footer-minf500.js?v=13">
+    <script src="../kaliumthemecom-laborator.netdna-ssl.com/assets/js/jquery.knob.js">
+    </script>
+    <script src="../kaliumthemecom-laborator.netdna-ssl.com/assets/js/jquery.throttle.js">
+    </script>
+
+    <script src="../kaliumthemecom-laborator.netdna-ssl.com/assets/js/jquery.classycountdown.js">
     </script>
     <!-- Google Code for Click Conversion Page -->
+    <script>
+    $(document).ready(function(){
+        var timenow = new Date().getTime() / 1000;
+        $('#countdown4').ClassyCountdown({
+        end: '1530694800',
+        now: timenow,
+        labels: true,
+        style: {
+        element: "",
+        textResponsive: .5,
+        days: {
+        gauge: {
+        thickness: .03,
+        bgColor: "rgba(255,255,255,0.05)",
+        fgColor: "#1abc9c"
+        },
+        textCSS: 'font-family:\'Open Sans\'; font-size:25px; font-weight:300; color:#fff;'
+        },
+        hours: {
+        gauge: {
+        thickness: .03,
+        bgColor: "rgba(255,255,255,0.05)",
+        fgColor: "#2980b9"
+        },
+        textCSS: 'font-family:\'Open Sans\'; font-size:25px; font-weight:300; color:#fff;'
+        },
+        minutes: {
+        gauge: {
+        thickness: .03,
+        bgColor: "rgba(255,255,255,0.05)",
+        fgColor: "#8e44ad"
+        },
+        textCSS: 'font-family:\'Open Sans\'; font-size:25px; font-weight:300; color:#fff;'
+        },
+        seconds: {
+        gauge: {
+        thickness: .03,
+        bgColor: "rgba(255,255,255,0.05)",
+        fgColor: "#f39c12"
+        },
+        textCSS: 'font-family:\'Open Sans\'; font-size:25px; font-weight:300; color:#fff;'
+        }
+
+        },
+        onEndCallback: function() {
+        console.log("Time out!");
+        }
+        }); 
+    });
+    </script>
+    <script src="../kaliumthemecom-laborator.netdna-ssl.com/assets/js/min/joinable-footer-minf500.js?v=13">
+    </script>
 </body>
 </html>
